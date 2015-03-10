@@ -6,7 +6,7 @@ $(document).ready(function(){
   while(index >= 0){
     var tweet = streams.home[index];
     var $tweet = $('<div></div>');
-    $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at);
+    $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + moment(tweet.created_at).fromNow());
     $tweet.appendTo($body);
     index -= 1;
   }
