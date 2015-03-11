@@ -1,5 +1,5 @@
 function displayTweet(tweet, location) {
-  var $tweet = $('<li class="tweet">' + '@' + '<span class="user">' + tweet.user + '</span>' + ': ' + tweet.message + ' ' + moment(tweet.created_at).fromNow() + '</li>');
+  var $tweet = $('<li class="tweet">' + '@' + '<span class="user">' + tweet.user + '</span>' + ': ' + tweet.message + ' ' + '<span class="timestamp">' + moment(tweet.created_at).fromNow() + '</span>' + '</li>');
   //$tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + moment(tweet.created_at).fromNow());
   $tweet.appendTo(location);
 }

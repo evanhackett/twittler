@@ -30,3 +30,10 @@ ul {
     text-align: center;
     margin:0 auto;
 }
+.user {
+    font-weight: bold;
+}
+.timestamp {
+    font-size: 14px;
+    color: #999;
+}
