@@ -23,6 +23,14 @@ function displayTimeline(user, location) {
   }
 }
 
+function addClickHandler($tweetList) {
+  $('.user').on('click', function() {
+    var user = $(this).text();
+    $tweetList.html('<ul class="tweetList"></ul>');
+    displayTimeline(user, $tweetList);
+  });
+}
+
 $(document).ready(function(){
   var $tweetList = $('.tweetList');
 
@@ -31,12 +39,9 @@ $(document).ready(function(){
   $('.updateButton').on('click', function() {
     $tweetList.html('<ul class="tweetList"></ul>');
     displayAll($tweetList);
+    addClickHandler($tweetList);
   });
 
-  $('.user').on('click', function() {
-    var user = $(this).text();
-    $tweetList.html('<ul class="tweetList"></ul>');
-    displayTimeline(user, $tweetList);
-  });
+  addClickHandler($tweetList);
 
 });
