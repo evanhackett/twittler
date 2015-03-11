@@ -1,10 +1,10 @@
 function displayTweet(tweet, location) {
   var $tweet = $('<li class="tweet">' + '@' + '<span class="user">' + tweet.user + '</span>' + ': ' + tweet.message + ' ' + '<span class="timestamp">' + moment(tweet.created_at).fromNow() + '</span>' + '</li>');
-  //$tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + moment(tweet.created_at).fromNow());
   $tweet.appendTo(location);
 }
 
 function displayAll(location) {
+  $('h2').text("All tweets");
   var index = streams.home.length - 1;
   while(index >= 0){
     var tweet = streams.home[index];
@@ -25,18 +25,17 @@ function displayTimeline(user, location) {
 
 $(document).ready(function(){
   var $tweetList = $('.tweetList');
-  //$body.html('');
 
   displayAll($tweetList);
 
   $('.updateButton').on('click', function() {
-    $tweetList.html('<ul></ul>');
+    $tweetList.html('<ul class="tweetList"></ul>');
     displayAll($tweetList);
   });
 
   $('.user').on('click', function() {
     var user = $(this).text();
-    $tweetList.html('<ul></ul>');
+    $tweetList.html('<ul class="tweetList"></ul>');
     displayTimeline(user, $tweetList);
   });
 
