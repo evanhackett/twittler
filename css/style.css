@@ -19,10 +19,11 @@ ul {
 
 .tweet {
     margin: 5px auto 5px auto;
-    border: 4px solid #fff;
+    border: 4px solid #FFB84D;
     border-radius: 20px;
     width: 400px;
     padding: 20px;
+    background-color: #fff;
 }
 
 .updateButton {
