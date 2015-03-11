@@ -38,6 +38,8 @@ ul {
     font-weight: bold;
 }
 .timestamp {
+    display: block;
     font-size: 14px;
     color: #999;
+    margin-top: 5px;
 }
