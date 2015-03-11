@@ -36,6 +36,7 @@ ul {
 }
 .user {
     font-weight: bold;
+    cursor: pointer;
 }
 .timestamp {
     display: block;
